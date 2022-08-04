@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import AdminLogin from "./components/AdminLogin";
 import Dashboard from "./components/Dashboard";
-import Form from "./components/Form";
+import Form from "./components/form";
 
 function App() {
   return (
