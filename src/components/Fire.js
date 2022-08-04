@@ -3,7 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
-import "firebase/compat/auth";
+import {getAuth } from "firebase/auth";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
@@ -20,8 +20,9 @@ const firebaseConfig = {
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 const db = getFirestore(app);
 // firebase.initializeApp(firebaseConfig);
 // export const db = firebase.firestore();
 
-export default db;
+export {auth, db};

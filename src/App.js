@@ -1,20 +1,22 @@
 import React from "react";
-import './App.css';
-import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
+import "./App.css";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import AdminLogin from "./components/AdminLogin";
-import { Form } from "react-bootstrap";
+import Dashboard from "./components/Dashboard";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
-    <BrowserRouter> 
-      <Routes>
-        <Route exact path="/" element={<Login />}/>
-        <Route path="/admin" element={<AdminLogin />}/>
-        <Route path="/form" element={<Form />}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
